@@ -6,16 +6,32 @@
 [English](https://github-com.translate.goog/1234567Yang/cf-proxy-ex/blob/main/security_password_tutorial.md?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp)
 </div>
 
-## 1：修改worker，`Ctrl + F`找到密码行
+## 1：使用环境变量（推荐）
 
-```
-const password
+如果您使用的是 Cloudflare Workers 部署，可以通过设置环境变量来配置密码，而无需修改代码：
+
+1. 登录 Cloudflare 控制台。
+2. 进入您的 Worker 项目。
+3. 点击 **Settings** (设置) -> **Variables** (变量)。
+4. 在 **Environment Variables** (环境变量) 部分，点击 **Add variable** (添加变量)。
+5. **Variable name** (变量名称) 填入 `PROXY_PASSWORD`。
+6. **Value** (值) 填入您想设置的密码。
+7. 点击 **Save and deploy** (保存并部署)。
+
+这样设置后，程序会优先使用环境变量中的密码。
+
+## 2：修改worker代码
+
+`Ctrl + F` 找到密码行：
+
+```javascript
+const password = ...
 ```
 
 ![密码](img/depoly/pwd.png)
 
-## 如果选择打开`showPwdPage`，那么可以直接输入密码（有效期1周），无需后续步骤。
-默认打开 `showPwdPage`。
+## 如果选择打开 `showPasswordPage`，那么可以直接输入密码（有效期1周），无需后续步骤。
+默认打开 `showPasswordPage`。
 
 ## 打开开发者工具（Dev tool），转到程序->Cookie->双击新建Cookie
 

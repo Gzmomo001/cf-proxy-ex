@@ -4,15 +4,16 @@
 <div align="center">
 <h1>Cloudflare Proxy EX</h1>
 
-[中文](https://github.com/1234567Yang/cf-proxy-ex) [English](https://github-com.translate.goog/1234567Yang/cf-proxy-ex?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp)
+[中文](https://github.com/Gzmomo001/cf-proxy-ex) [English](https://github-com.translate.goog/Gzmomo001/cf-proxy-ex?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp)
 
 <br>
 
-<!--[![GitHub license](https://img.shields.io/github/license/1234567Yang/cf-proxy-ex)](https://github.com/ViewFaceCore/ViewFaceCore/blob/main/LICENSE) &nbsp;&nbsp;-->
+<!--[![GitHub license](https://img.shields.io/github/license/Gzmomo001/cf-proxy-ex)](https://github.com/ViewFaceCore/ViewFaceCore/blob/main/LICENSE) &nbsp;&nbsp;-->
 
-![GitHub stars](https://img.shields.io/github/stars/1234567Yang/cf-proxy-ex?style=flat)
-[![Github Release](https://img.shields.io/github/v/release/1234567Yang/cf-proxy-ex)](https://github.com/1234567Yang/cf-proxy-ex/releases/latest)
-![GitHub forks](https://img.shields.io/github/forks/1234567Yang/cf-proxy-ex)
+![GitHub stars](https://img.shields.io/github/stars/Gzmomo001/cf-proxy-ex?style=flat)
+[![Github Release](https://img.shields.io/github/v/release/Gzmomo001/cf-proxy-ex)](https://github.com/Gzmomo001/cf-proxy-ex/releases/latest)
+![GitHub forks](https://img.shields.io/github/forks/Gzmomo001/cf-proxy-ex)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Gzmomo001/cf-proxy-ex)
 
 [💻 在线体验](#在线体验) &nbsp;| [⚒ 用法](#用法) &nbsp;| [🚀 快速开始](#快速开始) &nbsp;| [🔒 安全密码](#安全密码) &nbsp;| [📸 截图](#截图) &nbsp;| [📦 LICENSE](#license) &nbsp;| [📄 备注](#备注) &nbsp;| [👍 感谢](#感谢) &nbsp;| [⭐ Star History](#star-history)
 
@@ -42,16 +43,16 @@ Password is `maga2028`
 # 用法
 * 请先根据 [快速开始](#快速开始) 进行部署
 * 在任意网址前面加上 `https://你的域名/` <br>例如 `https://你的域名/https://github.com`
-* [使用技巧](https://github.com/1234567Yang/cf-proxy-ex/blob/main/usage_tips.md)
+* [使用技巧](https://github.com/Gzmomo001/cf-proxy-ex/blob/main/usage_tips.md)
 
 
 # 快速开始
 * 在 1.4 版本后启动了默认[安全密码](#安全密码)，默认密码为 `123`，感谢 <ruby>Bolster<rp>（</rp><rt>da sha bi</rt><rp>）</rp></ruby> 给我整不会了。
 
-![bolster](https://github.com/1234567Yang/cf-proxy-ex/blob/main/img/depoly/abuse_report.png)
+![bolster](https://github.com/Gzmomo001/cf-proxy-ex/blob/main/img/depoly/abuse_report.png)
 
-* [在Deno上部署](https://github.com/1234567Yang/cf-proxy-ex/blob/main/deploy_on_deno_tutorial.md)
-* [在Cloudflare上部署](https://github.com/1234567Yang/cf-proxy-ex/blob/main/deploy_on_cf_tutorial.md)
+* [在Deno上部署](https://github.com/Gzmomo001/cf-proxy-ex/blob/main/deploy_on_deno_tutorial.md)
+* [在Cloudflare上部署](https://github.com/Gzmomo001/cf-proxy-ex/blob/main/deploy_on_cf_tutorial.md)
 * 自定义域名获取（可选但建议，更稳定）：
   * 域名购买：
     * https://porkbun.com/
@@ -65,8 +66,8 @@ Password is `maga2028`
 > 如果部署失败（重定向、报错 等），请尝试完全复制粘贴 `_worker.js` 的内容，如果还是不行请删除 worker 并新建一个。
 
 # 安全密码
-安全密码利用Cookie，在设置了密码的情况下，会先检测是否有密码Cookie以及是否正确，如果不正确那么可以设置输入密码界面，或者直接403。密码Cookie默认名称为`passwordCookieName`，设置密码可以代码里搜索`const password = "";`并替换成你的密码。
-更详细的教程可以[点这里](https://github.com/1234567Yang/cf-proxy-ex/blob/main/security_password_tutorial.md)。
+安全密码利用Cookie，在设置了密码的情况下，会先检测是否有密码Cookie以及是否正确，如果不正确那么可以设置输入密码界面，或者直接403。您可以通过 Cloudflare 控制台设置环境变量 `PROXY_PASSWORD` 来配置密码（推荐），也可以在代码里搜索 `const password` 并替换成您的密码。
+更详细的教程可以[点这里](https://github.com/Gzmomo001/cf-proxy-ex/blob/main/security_password_tutorial.md)。
 
 # 截图
 ![Duckduckgo](img/duckduckgo.jpg)
@@ -92,11 +93,11 @@ MIT License + 一些条件<br>
 * 感谢 @04041b 发现了几个BUG，并告诉我在线代理这个思路。
 * 本项目基于[gaboolic的cloudflare-reverse-proxy](https://github.com/gaboolic/cloudflare-reverse-proxy/)，感谢gaboolic给我提供相关在Cloudflare部署的实现思路。
 * 感谢所有提交issue，提交PR的朋友帮助改进本项目。
-* 感谢 @brightu 分享了一个非常实用的添加Cookie的方式 https://github.com/1234567Yang/cf-proxy-ex/issues/15 。
-* 感谢 @since114514 参与我的一个小实验：成功从worker.js发现了一段注释 https://github.com/1234567Yang/cf-proxy-ex/issues/31 。
-* 感谢 @fangyuan99 通知我本项目其实还可以在Deno上部署 https://github.com/1234567Yang/cf-proxy-ex/issues/33 。
-* 感谢 @Tayasui-rainnya 提供的 UI https://github.com/1234567Yang/cf-proxy-ex/issues/44 。
+* 感谢 @brightu 分享了一个非常实用的添加Cookie的方式 https://github.com/Gzmomo001/cf-proxy-ex/issues/15 。
+* 感谢 @since114514 参与我的一个小实验：成功从worker.js发现了一段注释 https://github.com/Gzmomo001/cf-proxy-ex/issues/31 。
+* 感谢 @fangyuan99 通知我本项目其实还可以在Deno上部署 https://github.com/Gzmomo001/cf-proxy-ex/issues/33 。
+* 感谢 @Tayasui-rainnya 提供的 UI https://github.com/Gzmomo001/cf-proxy-ex/issues/44 。
 <!--* ~~非常非常非常感谢为我未来着想的学校管理员，把好多正常网站屏蔽了，否则这个项目就不存在了。此外，非常非常非常感谢学校管理员是让这个项目存在的原因（之一），能让我写在 College App 上~~-->
 
 # Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=1234567Yang/cf-proxy-ex&type=Date)](https://star-history.com/#1234567Yang/cf-proxy-ex&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Gzmomo001/cf-proxy-ex&type=Date)](https://star-history.com/#Gzmomo001/cf-proxy-ex&Date)
